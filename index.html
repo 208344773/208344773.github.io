@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>动态时钟</title>
+    <style>
+        body { 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial;
+            background: #f0f0f0;
+        }
+        #clock {
+            font-size: 5rem;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div id="clock"></div>
+    <script>
+        function updateTime() {
+            document.getElementById('clock').innerHTML = new Date().toLocaleTimeString();
+        }
+        setInterval(updateTime, 1000);
+        updateTime(); // 立即显示时间
+    </script>
+</body>
+</html>
